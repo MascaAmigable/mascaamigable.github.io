@@ -1,0 +1,222 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    width: 90%;
+}
+
+video {
+    width: 90%;
+    margin-top: 10vh;
+}
+
+::-webkit-scrollbar {
+    background-color: #ffffff;
+    color: #ffffff;
+    width: .5rem;
+}
+  
+::-webkit-scrollbar-corner {
+    background-color: #ffffff;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #b8b8b8;
+    border-radius: 1rem;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9c9c9c;
+    border-radius: 1rem;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.123);
+    z-index: 1;
+}
+
+.innerHeader {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    width: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4vh;
+    height: 100%;
+    align-items: center;
+}
+
+.headerLogo {
+    background: none;
+    width: 10vh;
+    height: 100%;
+}
+
+.title {
+    color: black;
+    font-size: 3vw;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.buttons {
+    gap: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    font-size: 3vh;
+    color: black;
+    border: none;
+    background: none;
+    font-weight: 500;
+    text-decoration: none;
+    height: 100%;
+}
+
+.button:hover {
+    font-weight: 1000;
+    transition: font-weight 1s;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.thisThing {
+    background-color: rgb(0, 194, 0);
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+@keyframes opacity {
+    form { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.textDescription {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-left: 10vh;
+    width: 40%;
+    height: fit-content;
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+.imagenDeTuVieja {
+    background: none;
+    height: 100%;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+.panel {
+    background-color: white;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes appearLeft {
+    form { margin-left: -60rem; opacity: 0; }
+    to { margin-left: 0; opacity: 1; }
+}
+
+@keyframes appearRight {
+    form { margin-right: -60rem; opacity: 0; }
+    to { margin-right: 0; opacity: 1; }
+}
+
+.izquierda {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10vh;
+    animation-name: appearLeft;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    margin-left: -60rem;
+    opacity: 0;
+}
+
+.derecha {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 10vh;
+    animation-name: appearRight;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    margin-right: -60rem;
+    opacity: 0;
+}
+
+.description {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 2vw;
+    font-weight: 500;
+    width: 80vh;
+    height: fit-content;
+}
+
+.paneles {
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
