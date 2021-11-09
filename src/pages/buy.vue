@@ -1,3 +1,0 @@
-<template>
-    <br><br><br><br><br><br>Soon...
-</template>
