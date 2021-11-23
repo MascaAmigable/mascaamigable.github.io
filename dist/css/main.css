@@ -20,6 +20,10 @@ img {
     width: fit-content;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 ::-webkit-scrollbar {
     background-color: #ffffff;
     color: #ffffff;
