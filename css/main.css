@@ -1,0 +1,342 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    color: black;
+    font-family: Calibri;
+    overflow-x: hidden;
+}
+
+textarea, input {
+    font-family: Calibri;
+}
+
+video {
+    width: 90%;
+    margin-top: 10vh;
+}
+
+img {
+    height: 100%;
+    width: fit-content;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    background-color: #ffffff;
+    color: #ffffff;
+    width: .5rem;
+}
+  
+::-webkit-scrollbar-corner {
+    background-color: #ffffff;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #b8b8b8;
+    border-radius: 1rem;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9c9c9c;
+    border-radius: 1rem;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.123);
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.innerHeader {
+    width: 90vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    width: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.headerLogo {
+    background: none;
+    width: 10vh;
+    height: 10vh;
+}
+
+.title {
+    color: black;
+    font-size: 4vh;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .buttons {
+        visibility: hidden;
+    }
+
+    .menuBtn {
+        visibility: visible !important;
+    }
+
+    .sideMenu {
+        visibility: visible !important;
+    }
+
+    .thisThing {
+        flex-direction: column !important;
+        height: 80vh !important;
+    }
+
+    .textDescription {
+        width: 100% !important;
+    }
+
+    .imagenDeTuVieja {
+        width: 90% !important;
+        height: 50% !important;
+    }
+}
+
+.buttons {
+    margin-right: -50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuBtn {
+    height: 10vh;
+    width: fit-content;
+    border: none;
+    box-sizing: border-box;
+    padding: 3vh;
+    cursor: pointer;
+    visibility: hidden;
+    background: none;
+}
+
+.button {
+    text-align: center;
+    width: 10vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    color: black;
+    border: none;
+    background: none;
+    font-weight: 500;
+    text-decoration: none;
+    height: 100%;
+}
+
+.button:hover {
+    font-weight: 1000;
+    transition: font-weight 1s;
+}
+
+.thisThing {
+    background-color: rgb(0, 194, 0);
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    box-sizing: border-box;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    gap: 2vw;
+}
+
+@keyframes opacity {
+    form { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.textDescription {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 3vh;
+    font-weight: 600;
+    width: 60%;
+    height: fit-content;
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+.imagenDeTuVieja {
+    background: none;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+.panel {
+    background-color: white;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes appearLeft {
+    form { margin-left: -60rem; opacity: 0; }
+    to { margin-left: 0; opacity: 1; }
+}
+
+@keyframes appearRight {
+    form { margin-right: -60rem; opacity: 0; }
+    to { margin-right: 0; opacity: 1; }
+}
+
+.izquierda {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10vh;
+    animation-name: appearLeft;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    margin-left: -60rem;
+    opacity: 0;
+}
+
+.derecha {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 10vh;
+    animation-name: appearRight;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    margin-right: -60rem;
+    opacity: 0;
+}
+
+.description {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 2vw;
+    font-weight: 500;
+    width: 80vh;
+    height: fit-content;
+}
+
+.paneles {
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sideMenu {
+    margin-top: 15vh;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.123);
+    height: 80vh;
+    width: 70vw;
+    border-radius: 5vh;
+    position: fixed;
+    z-index: 2;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 1vh;
+    padding-right: 15vw;
+    transition: margin-left 0.7s;
+    visibility: hidden;
+}
+
+.sBtns {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sTitle {
+    font-size: 6vw;
+    font-weight: 600;
+    color: black;
+    text-align: end;
+}
+
+.sButton {
+    text-align: end;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 4vh;
+    color: black;
+    border: none;
+    background: none;
+    font-weight: 500;
+    text-decoration: none;
+    height: 100%;
+    align-items: flex-end;
+}
+.sButton:hover {
+    font-weight: 600;
+}
+.oppened {
+    margin-left: 40vw;
+}
+
+.closed {
+    margin-left: 500vw;
+}
