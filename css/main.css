@@ -340,3 +340,8 @@ button:hover {
 .closed {
     margin-left: 500vw;
 }
+
+.oofImg {
+    width: 90%;
+    height: fit-content;
+}
